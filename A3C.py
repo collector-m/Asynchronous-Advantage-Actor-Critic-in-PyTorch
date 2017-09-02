@@ -49,7 +49,7 @@ class A3CLSTMNet(nn.Module):
         super(A3CLSTMNet, self).__init__()
         self.state_shape = state_shape 
         self.action_dim = action_dim
-        self.conv1 = nn.Con v2d(self.state_shape[0], 32, 3, stride=2)
+        self.conv1 = nn.Conv2d(self.state_shape[0], 32, 3, stride=2)
         self.conv2 = nn.Conv2d(32, 32, 3, stride=2, padding=1)
         self.conv3 = nn.Conv2d(32, 32, 3, stride=2, padding=1)
         self.conv4 = nn.Conv2d(32, 32, 3, stride=2, padding=1)
